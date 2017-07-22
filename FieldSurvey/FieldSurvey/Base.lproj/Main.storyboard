@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Un7-jQ-5AE">
+<device id="retina4_7" orientation="portrait">
+<adaptation id="fullscreen"/>
+</device>
+<dependencies>
+<deployment identifier="iOS"/>
+<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+<capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+</dependencies>
+<scenes>
+<!--Navigation Controller-->
+<scene sceneID="X7z-ms-F27">
+<objects>
+<navigationController id="Un7-jQ-5AE" sceneMemberID="viewController">
+<navigationBar key="navigationBar" contentMode="scaleToFill" id="tr7-cj-OBP">
+<rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+<autoresizingMask key="autoresizingMask"/>
+</navigationBar>
+<connections>
+<segue destination="ZmJ-Qw-6E1" kind="relationship" relationship="rootViewController" id="41v-2J-To1"/>
+</connections>
+</navigationController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="uP3-1B-mCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="-180" y="155"/>
+</scene>
+<!--Field Survey View Controller-->
+<scene sceneID="2yl-XG-l9I">
+<objects>
+<viewController automaticallyAdjustsScrollViewInsets="NO" id="ZmJ-Qw-6E1" customClass="FieldSurveyViewController" customModule="FieldSurvey" customModuleProvider="target" sceneMemberID="viewController">
+<layoutGuides>
+<viewControllerLayoutGuide type="top" id="Lpl-Zc-GF6"/>
+<viewControllerLayoutGuide type="bottom" id="q5m-I8-eRh"/>
+</layoutGuides>
+<view key="view" contentMode="scaleToFill" id="vCd-Cr-UQ5">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="72" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2dV-kg-o0j">
+<rect key="frame" x="0.0" y="64" width="375" height="603"/>
+<color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+<prototypes>
+<tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="fieldSurveyCell" rowHeight="72" id="b1d-kE-AtU" customClass="FieldSurveyTableViewCell" customModule="FieldSurvey" customModuleProvider="target">
+<rect key="frame" x="0.0" y="28" width="375" height="72"/>
+<autoresizingMask key="autoresizingMask"/>
+<tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b1d-kE-AtU" id="IKr-o2-4vV">
+<rect key="frame" x="0.0" y="0.0" width="342" height="71.5"/>
+<autoresizingMask key="autoresizingMask"/>
+<subviews>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLu-qx-kqc">
+<rect key="frame" x="78" y="10.5" width="256" height="21"/>
+<fontDescription key="fontDescription" type="system" pointSize="17"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+<imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QKi-3D-j16">
+<rect key="frame" x="18" y="10.5" width="50" height="50"/>
+<constraints>
+<constraint firstAttribute="height" constant="50" id="gbe-tn-ww7"/>
+<constraint firstAttribute="width" constant="50" id="yjo-IK-aLU"/>
+</constraints>
+</imageView>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOo-4j-E9b">
+<rect key="frame" x="78" y="39.5" width="256" height="21"/>
+<fontDescription key="fontDescription" type="system" pointSize="17"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+</subviews>
+<constraints>
+<constraint firstItem="xOo-4j-E9b" firstAttribute="bottom" secondItem="QKi-3D-j16" secondAttribute="bottom" id="6V5-US-awe"/>
+<constraint firstItem="WLu-qx-kqc" firstAttribute="leading" secondItem="QKi-3D-j16" secondAttribute="trailing" constant="10" id="HjS-3N-Vwv"/>
+<constraint firstAttribute="trailingMargin" secondItem="xOo-4j-E9b" secondAttribute="trailing" id="LiY-Pv-3Eg"/>
+<constraint firstItem="QKi-3D-j16" firstAttribute="centerY" secondItem="IKr-o2-4vV" secondAttribute="centerY" id="Qkc-oN-COy"/>
+<constraint firstItem="QKi-3D-j16" firstAttribute="leading" secondItem="IKr-o2-4vV" secondAttribute="leadingMargin" constant="10" id="SFE-mk-4U7"/>
+<constraint firstItem="WLu-qx-kqc" firstAttribute="top" secondItem="QKi-3D-j16" secondAttribute="top" id="ba1-us-c3b"/>
+<constraint firstAttribute="trailingMargin" secondItem="WLu-qx-kqc" secondAttribute="trailing" id="d3w-jR-oE4"/>
+<constraint firstItem="xOo-4j-E9b" firstAttribute="leading" secondItem="QKi-3D-j16" secondAttribute="trailing" constant="10" id="gu0-pT-Htu"/>
+</constraints>
+</tableViewCellContentView>
+<connections>
+<outlet property="dateLabel" destination="xOo-4j-E9b" id="zCx-sk-BHc"/>
+<outlet property="fieldIconImageView" destination="QKi-3D-j16" id="dvW-2L-RtO"/>
+<outlet property="titleLabel" destination="WLu-qx-kqc" id="3M5-J8-OB5"/>
+<segue destination="60k-MY-2RJ" kind="show" id="IVw-hb-2ee"/>
+</connections>
+</tableViewCell>
+</prototypes>
+<connections>
+<outlet property="dataSource" destination="ZmJ-Qw-6E1" id="SQD-L0-4Tj"/>
+<outlet property="delegate" destination="ZmJ-Qw-6E1" id="9lt-pg-2tA"/>
+</connections>
+</tableView>
+</subviews>
+<color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+<constraints>
+<constraint firstAttribute="trailing" secondItem="2dV-kg-o0j" secondAttribute="trailing" id="94Y-MA-zhl"/>
+<constraint firstItem="q5m-I8-eRh" firstAttribute="top" secondItem="2dV-kg-o0j" secondAttribute="bottom" id="GrR-yn-oii"/>
+<constraint firstItem="2dV-kg-o0j" firstAttribute="top" secondItem="Lpl-Zc-GF6" secondAttribute="bottom" id="M6P-JK-9n1"/>
+<constraint firstItem="2dV-kg-o0j" firstAttribute="leading" secondItem="vCd-Cr-UQ5" secondAttribute="leading" id="cvK-x4-Cv7"/>
+</constraints>
+</view>
+<navigationItem key="navigationItem" id="YOK-aq-UNE"/>
+<connections>
+<outlet property="fieldSurveyTableView" destination="2dV-kg-o0j" id="Dql-as-dF6"/>
+</connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="CmS-DJ-Gu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="640.79999999999995" y="152.47376311844079"/>
+</scene>
+<!--Field Survey Detail View Controller-->
+<scene sceneID="zip-wl-PJN">
+<objects>
+<viewController id="60k-MY-2RJ" customClass="FieldSurveyDetailViewController" customModule="FieldSurvey" customModuleProvider="target" sceneMemberID="viewController">
+<layoutGuides>
+<viewControllerLayoutGuide type="top" id="C57-hp-siB"/>
+<viewControllerLayoutGuide type="bottom" id="nHL-CM-iTP"/>
+</layoutGuides>
+<view key="view" contentMode="scaleToFill" id="QAT-30-eDY">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GIt-Ko-P1V">
+<rect key="frame" x="16" y="74" width="50" height="50"/>
+<constraints>
+<constraint firstAttribute="width" constant="50" id="CFd-83-xpk"/>
+<constraint firstAttribute="height" constant="50" id="cxd-CQ-Qef"/>
+</constraints>
+</imageView>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygE-sT-AT4">
+<rect key="frame" x="81" y="74" width="278" height="21"/>
+<fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tia-DQ-HBH">
+<rect key="frame" x="81" y="105" width="278" height="21"/>
+<fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+<nil key="textColor"/>
+<nil key="highlightedColor"/>
+</label>
+<textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qRv-zo-bxG">
+<rect key="frame" x="16" y="134" width="343" height="533"/>
+<color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+<mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+<fontDescription key="fontDescription" type="system" pointSize="14"/>
+<textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+</textView>
+</subviews>
+<color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+<constraints>
+<constraint firstItem="qRv-zo-bxG" firstAttribute="top" secondItem="GIt-Ko-P1V" secondAttribute="bottom" constant="10" id="21g-oC-c6N"/>
+<constraint firstItem="nHL-CM-iTP" firstAttribute="top" secondItem="qRv-zo-bxG" secondAttribute="bottom" id="5bu-fV-a9m"/>
+<constraint firstItem="Tia-DQ-HBH" firstAttribute="leading" secondItem="GIt-Ko-P1V" secondAttribute="trailing" constant="15" id="7hr-nN-T6M"/>
+<constraint firstItem="GIt-Ko-P1V" firstAttribute="top" secondItem="C57-hp-siB" secondAttribute="bottom" constant="10" id="9Fy-t1-i13"/>
+<constraint firstAttribute="trailingMargin" secondItem="ygE-sT-AT4" secondAttribute="trailing" id="UjW-z9-IY0"/>
+<constraint firstAttribute="trailingMargin" secondItem="qRv-zo-bxG" secondAttribute="trailing" id="WCy-Z8-lWK"/>
+<constraint firstItem="ygE-sT-AT4" firstAttribute="top" secondItem="C57-hp-siB" secondAttribute="bottom" constant="10" id="glL-70-xdf"/>
+<constraint firstAttribute="leadingMargin" secondItem="GIt-Ko-P1V" secondAttribute="leading" id="lII-jH-Bd6"/>
+<constraint firstAttribute="trailingMargin" secondItem="Tia-DQ-HBH" secondAttribute="trailing" id="rTa-P7-92U"/>
+<constraint firstItem="ygE-sT-AT4" firstAttribute="leading" secondItem="GIt-Ko-P1V" secondAttribute="trailing" constant="15" id="vx4-d5-0ae"/>
+<constraint firstItem="Tia-DQ-HBH" firstAttribute="top" secondItem="ygE-sT-AT4" secondAttribute="bottom" constant="10" id="xmy-nU-ONR"/>
+<constraint firstItem="qRv-zo-bxG" firstAttribute="leading" secondItem="QAT-30-eDY" secondAttribute="leadingMargin" id="yVk-FR-zwh"/>
+</constraints>
+</view>
+<connections>
+<outlet property="dateLabel" destination="Tia-DQ-HBH" id="uxF-qz-dAk"/>
+<outlet property="fieldDescriptionLabel" destination="qRv-zo-bxG" id="KoQ-vI-J2V"/>
+<outlet property="fieldIconImageView" destination="GIt-Ko-P1V" id="GMn-jA-Dx5"/>
+<outlet property="fieldTitleLabel" destination="ygE-sT-AT4" id="j9j-tu-bkQ"/>
+</connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="2RF-e3-Rjg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+</objects>
+<point key="canvasLocation" x="1493.5999999999999" y="152.47376311844079"/>
+</scene>
+</scenes>
+</document>
